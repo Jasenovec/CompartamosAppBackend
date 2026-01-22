@@ -3,6 +3,18 @@
 API REST sencilla para demo bancaria (cuentas + transacciones).
 Persistencia en memoria (EF Core InMemory) con datos seed para pruebas rápidas en Swagger.
 
+## Quick Start (prueba rápida)
+
+1. Ejecuta el API:
+   ```bash
+   dotnet restore
+   dotnet run
+   ```
+2. Abre Swagger: `http://localhost:5266/swagger`
+3. Prueba rápida:
+   - `GET /api/accounts/1`
+   - `POST /api/transactions` con body (DEPOSIT / WITHDRAW)
+
 ## Tech
 - .NET 8 (ASP.NET Core Web API)
 - Entity Framework Core InMemory
@@ -28,7 +40,7 @@ dotnet run
 ```
 
 ## Swagger
-- `/swagger`
+- `http://localhost:5266/swagger`
 
 ## Notas
 - La BD es InMemory: al reiniciar el backend, se reinician los datos.
